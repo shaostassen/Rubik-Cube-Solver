@@ -1,3 +1,4 @@
-1. Using two-phase/kociemba algorithm(borrowed library) to efficiently solve any scrumble of 3x3 cube
-2. Upload image of rubik's cube, and  
-3. Test with Full colors & mixed color for one face
+1. Using two-phase/kociemba algorithm(borrowed library) to efficiently solve any scrumble of 3x3 cube (complete)
+2. Upload image of rubik's cube, and write color detection (complete)
+2_5. constrict the HSV colorspace for each color
+3. Test with Full colors & mixed color for one face (failed)

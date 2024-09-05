@@ -4,7 +4,7 @@ import numpy as np
 # Define the HSV color ranges for the 6 colors
 # Ranges should be broad enough to account for variations in lighting & narrow enough to avoid false positives
 color_ranges = {
-    'white': ([0, 0, 200], [180, 30, 255]),     # Higher value (brightness), low saturation
+    'white': ([20, 0, 230], [50, 30, 250]),     # Higher value (brightness), low saturation
     'red': ([0, 150, 50], [10, 255, 255]),      # Red hue range (lower)
     'orange': ([10, 100, 100], [25, 255, 255]), # Orange hue range
     'blue': ([90, 100, 100], [130, 255, 255]),  # Blue hue range (narrowed)
@@ -54,6 +54,6 @@ def extract_rubiks_colors(image_path):
     return colors
 
 # Example usage
-image_path = 'image/white.jpeg'
+image_path = 'image/blue.jpeg'
 cube_face_colors = extract_rubiks_colors(image_path)
 print("Detected colors for the Rubik's Cube face:", cube_face_colors)
