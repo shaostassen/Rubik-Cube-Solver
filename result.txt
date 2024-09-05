@@ -1,0 +1,22 @@
+blue: ['white', 'white', 'white', 'blue', 'blue', 'white', 'white', 'white', 'white']
+green: ['green', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white']
+orange: ['red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'white']
+red: ['red', 'red', 'red', 'white', 'white', 'white', 'white', 'white', 'white']
+white: ['white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white']
+yellow: ['yellow', 'yellow', 'white', 'yellow', 'yellow', 'yellow', 'yellow', 'yellow', 'white']
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+yellow: ['orange', 'orange', 'orange', 'yellow', 'yellow', 'yellow', 'orange', 'orange', 'orange']
+
+orange:['red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red']
+ 
+red: ['red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red']
+ 
+green: ['green', 'green', 'orange', 'green', 'green', 'green', 'orange', 'green', 'white']
+ 
+blue: ['blue', 'blue', 'white', 'blue', 'blue', 'blue', 'blue', 'blue', 'white']
+ 
+white: ['white', 'white', 'white', 'white', 'white', 'white', 'white', 'white', 'white']
+
+
