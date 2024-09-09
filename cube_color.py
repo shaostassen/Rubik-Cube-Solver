@@ -4,12 +4,12 @@ import numpy as np
 # Define the HSV color ranges for the 6 colors
 # Ranges should be broad enough to account for variations in lighting & narrow enough to avoid false positives
 color_ranges = {
-    'white': ([20, 0, 230], [50, 30, 250]),     # Higher value (brightness), low saturation
-    'red': ([0, 150, 50], [10, 255, 255]),      # Red hue range (lower)
-    'orange': ([10, 100, 100], [25, 255, 255]), # Orange hue range
-    'blue': ([90, 100, 100], [130, 255, 255]),  # Blue hue range (narrowed)
-    'green': ([40, 100, 100], [80, 255, 255]),  # Green hue range (narrowed)
-    'yellow': ([25, 150, 150], [35, 255, 255])  # Yellow hue range (narrowed)
+    'red': ([65, 80, 225], [90, 100, 240]),      # Red hue range (lower)
+    'blue': ([190, 115, 70], [210, 135, 100]),  # Blue hue range (narrowed)
+    'white': ([210, 230, 235], [235, 245, 245]),     # Higher value (brightness), low saturation
+    'orange': ([70, 140, 245], [90, 160, 255]), # Orange hue range
+    'green': ([80, 175, 80], [103, 190, 105]),  # Green hue range (narrowed)
+    'yellow': ([70, 240, 230], [95, 245, 245])  # Yellow hue range (narrowed)
 }
 
 # Helper function to detect color of a given region
@@ -31,7 +31,9 @@ def extract_rubiks_colors(image_path):
     image = cv2.resize(image, (300, 300))  # Assuming a square image of the cube face
     
     # Convert the image to HSV color space
-    hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+    #hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+
+    #cv2.imwrite('hsv_image1.png', hsv_image)
     
     # Define grid dimensions for the 3x3 face
     grid_size = 3
@@ -45,7 +47,7 @@ def extract_rubiks_colors(image_path):
             # Extract the region of interest (a single sticker)
             y_start = row * sticker_size
             x_start = col * sticker_size
-            sticker_region = hsv_image[y_start:y_start+sticker_size, x_start:x_start+sticker_size]
+            sticker_region = image[y_start:y_start+sticker_size, x_start:x_start+sticker_size]
             
             # Detect the color of the sticker
             detected_color = detect_color(sticker_region)
@@ -54,6 +56,6 @@ def extract_rubiks_colors(image_path):
     return colors
 
 # Example usage
-image_path = 'image/blue.jpeg'
+image_path = 'image/orange.jpeg'
 cube_face_colors = extract_rubiks_colors(image_path)
 print("Detected colors for the Rubik's Cube face:", cube_face_colors)
